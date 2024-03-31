@@ -1,0 +1,337 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+
+        .progress-bar {
+            width: 90%;
+            background-color: #f3f3f3;
+            border-radius: 25px;
+            overflow: hidden;
+        }
+        .progress-bar div {
+            height: 10px;
+            background-color: #EEBF63;
+            border-radius: 25px;
+        }
+
+
+        .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0px;
+  position: fixed; /* Menambahkan properti ini */
+  width: 100%; /* Menambahkan properti ini */
+  background-color: #000000; /* Menambahkan properti ini */
+  z-index: 3; /* Menambahkan properti ini */
+}
+
+.logo {
+  margin-left: 20px;
+}
+
+.nav-links {
+  list-style-type: none;
+}
+
+.nav-links li {
+  display: inline-block;
+  margin-right:20px; 
+}
+
+.burger {
+  display:none; 
+  flex-direction: column; 
+  cursor:pointer; 
+}
+
+.line1, .line2, .line3 { 
+  width:25px; 
+  height:2px; 
+  background-color:rgb(255, 255, 255); 
+  margin:3px;
+  margin-left: 10px; /* Menambahkan margin kiri */
+  transition : all ease-in-out .5s ; 
+}
+
+
+@media screen and (max-width :768px) {
+  .nav-links { 
+    display:none;
+  }
+
+  .burger {
+    display:flex;
+  }
+
+  .nav-active {
+    display:block;
+  }
+
+  .toggle .line1 { 
+    transform : rotate(-45deg) translate(-5px ,6px); 
+  }
+  
+  .toggle .line2 { 
+    opacity :0;
+  }
+  
+  .toggle .line3 { 
+    transform : rotate(45deg) translate(-5px ,-6px); 
+  }
+}
+
+.hamburger-line {
+    @apply w-[30px] h-[2px] my-2 block text-secondary
+}
+
+
+
+
+/* CSS Skills Start */
+.icons {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    max-width: 1200px; /* Lebar maksimum kontainer */
+}
+
+.icon {
+    width: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+}
+
+.icon img {
+    width: 100%;
+    height: auto;
+}
+
+.icon p {
+   font-size: 18px; 
+   color:#000;
+}
+
+@media (max-width: 786px) {
+    .icons {
+        flex-direction: column;
+        align-items: center; /* Menengahkan elemen secara horizontal */
+    }
+
+    .icon {
+        width: 60%; /* Mengubah lebar menjadi 60% dari lebar viewport */
+        margin-bottom: 20px; /* Menambahkan margin bawah */
+    }
+
+    .icon img {
+        width: 30%; /* Mengubah lebar gambar menjadi 50% dari lebar elemen induknya */
+        margin: 0 auto; /* Menengahkan gambar secara horizontal */
+    }
+}
+/* CSS Skills End */
+
+
+
+
+/* CSS Testimonials Start */
+        .testimonial {
+            width: 700px;
+            padding: 20px;
+            border-radius: 20px;
+            background-color: white;
+            margin: 0 auto; /* Menengahkan elemen secara horizontal */
+            margin-bottom: 40px; /* Menambahkan margin bawah */
+        }
+        
+        .testimonial img {
+            width: 100px;
+            height: auto;
+            border-radius: 50%; /* Membuat gambar bulat */
+            margin: 0 auto;
+            margin-bottom: 10px; /* Menambahkan margin bawah */
+        }
+
+
+        .testimonial h2 {
+           font-size: 24px; 
+           color:#000;
+           margin: 0 auto;
+           margin-bottom: 10px; /* Menambahkan margin bawah */
+        }
+        
+        .testimonial p {
+           font-size: 18px;
+           color:#000;
+        }
+        
+        .stars {
+            /* Tambahkan styling untuk ikon bintang di sini */
+            font-size: 24px;
+            color: #EEBF63;
+        }
+
+        /* Ketika lebar viewport kurang dari atau sama dengan 600px */
+        @media (max-width: 786px) {
+            .testimonial {
+                width: 70%; /* Mengubah lebar menjadi 70% dari lebar viewport */
+            }
+        
+            .testimonial img {
+                width: 70px; /* Mengubah lebar gambar menjadi 70px */
+            }
+        
+            .testimonial h2, .testimonial p {
+                font-size: 16px; /* Mengubah ukuran font menjadi 16px */
+            }
+        }        
+        /* CSS Testimonials End */
+
+
+
+        /* CSS Portfolio Start */
+        .projects {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+            max-width: 1200px; /* Lebar maksimum kontainer */
+        }
+        
+        .project {
+            width: 300px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: white;
+            text-align: center;
+            margin-bottom: 15px; /* Menambahkan margin bawah */
+        }
+        
+        .project img {
+            width: 100%;
+            height: auto;
+        }
+        
+        .project h2 {
+           font-size: 24px;
+           color:#000; 
+        }
+        
+        @media (max-width: 786px) {
+            .projects {
+                width: 30%; /* Mengubah lebar menjadi 60% dari lebar viewport */
+                height: 30%;
+                flex-direction: column;
+                align-items: center; /* Menengahkan elemen secara horizontal */
+            }
+        
+            .projects {
+                width: 30%; /* Mengubah lebar menjadi 60% dari lebar viewport */
+                height: 30%;
+                margin-bottom: 20px; /* Menambahkan margin bawah */
+            }
+        
+            .projects img {
+                width: 40%; /* Mengubah lebar gambar menjadi 50% dari lebar elemen induknya */
+                margin: 0 auto; /* Menengahkan gambar secara horizontal */
+            }
+        }   
+        /* CSS Portfolio End */
+
+
+
+        /* CSS Contact Start */
+        .container2 {
+        max-width: 800px;
+        margin: auto;
+        }
+
+        .header {
+        text-align:center;
+        }
+
+        .header button {
+        background-color:#EEBF63; 
+        color:black; 
+        border:none; 
+        padding:10px 20px; 
+        }
+
+        form {
+        display:flex; 
+        flex-direction:column; 
+        width :50%; 
+        color:black; 
+        margin:auto;}
+
+        input[type=text], input[type=email], textarea{
+        padding :10px; 
+        margin-bottom :10px;}
+
+        textarea{
+        height :100px;}
+
+        button[type=submit]{
+        background-color:#EEBF63; 
+        color:black;  
+        border:none ;  
+        padding :10px ;  
+        cursor:pointer;}
+
+        .personal-details{
+        text-align:center;
+        }
+
+        @media screen and (max-width: 786px) {
+            .personal-details {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* CSS Contact End */
+
+
+
+
+        /* CSS Footer Start */
+        /* Footer Styles */
+        footer {
+            background-color: black;
+            color: white;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+        }
+        
+        .brand, .navigation, .contact {
+           padding: 20px;
+        }
+        
+        .bottom-bar {
+           text-align: center;
+           padding: 10px;
+           background-color: #dfae4e; /* Darker shade */
+           width: 100%;
+        }
+        
+        #myBtn {
+            position: fixed; 
+            bottom: 20px; 
+            right: 30px; 
+            border: 2px solid white;
+            padding: 10px;
+            border-radius: 10px;
+            border-color:#dfae4e;
+         }
+        
+        /* CSS Footer End */
